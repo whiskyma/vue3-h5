@@ -1,0 +1,29 @@
+/*
+    覆盖mint的默认样式
+*/ 
+
+// mint-toast
+.mint-indicator-wrapper,.mint-indicator-mask
+    z-index 99999
+
+// mint-msgbox
+.mint-msgbox
+    .mint-msgbox-title
+        font-size 18px
+        color $txt-act
+    .mint-msgbox-btns
+        height 45px
+        line-height 45px
+        .mint-msgbox-btn
+            font-size .32rem
+            font-weight: 500
+            &.mint-msgbox-confirm
+                color $txt-act
+
+// mint-swipe
+.mint-swipe
+    .mint-swipe-indicator
+        opacity .4
+        &.is-active
+            background $txt-act
+            opacity 1

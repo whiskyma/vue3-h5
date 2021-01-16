@@ -1,0 +1,154 @@
+@import "./icon.styl"
+@import "./form.styl"
+@import "./mint.styl"
+
+
+body,html
+    width:100%;
+    height:100%;
+    background: $bg-body
+    font-size:.3rem;
+*
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border none;
+    -webkit-text-size-adjust:none;
+    -webkit-user-select:none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+input, a, textarea, select, button, input[type=button]
+    text-decoration none
+    border:0;
+    overflow visible
+    outline none
+    background:transparent;
+
+/***********************************************/
+
+#app
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    height:100%;
+section
+    position:relative;
+    -webkit-box-flex:1;
+    -webkit-flex:1;
+    flex:1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling:touch;
+.v-header
+    height: 0.9rem;
+    color #fff
+    position relative
+    background $bg-header
+    i
+        position: absolute;
+        top: 50%
+        transform: translateY(-50%)
+        &.lt
+            left .25rem
+        &.rt
+            right .25rem
+        &.icon-arrow-left
+            font-weight bold
+    h3
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+footer
+    overflow:hidden;
+    transition: all .4s
+    background $bg-footer
+    height 1rem
+    &.act
+        height 0
+.v-footer
+    color #fff
+    flexSpace()
+    li
+        width 25%
+        text-align: center;
+        span
+            font-size: 0.24rem;
+            // margin-top: .02rem;
+        a
+            flexColumn()
+            height 1rem
+            color #FFFFFF
+            &.act
+                color $txt-act
+
+    
+.fade-enter-active, .fade-leave-active
+    transition: opacity .4s;
+.fade-enter, .fade-leave-to
+    opacity: 0;
+
+// loginPop
+.loginAct
+    transform: translateY(0)!important;
+.loginPop
+    fixed()
+    z-index: 999;
+    background-color: #fff;
+    transition: all .5s;
+    transform: translateY(100%);
+    overflow: hidden;
+
+.v-swipe
+    height 2.6rem
+    background $bg-lazyimg
+.v-img
+    width 100%
+    height 100%
+    background $bg-lazyimg
+img[lazy=loading]
+    margin: auto;
+    background: url("../img/lazy.svg") no-repeat fixed center;
+
+.v-notice
+    display: flex;
+    align-items: center;
+    width: 96%;
+    margin: 0 auto;
+    height .65rem
+    border-bottom 1px solid #f2f2ff;
+    i
+        color $txt-act
+        margin-right .2rem
+    .notice-box
+        height: 0.65rem;
+        overflow: hidden;
+        line-height: .65rem;
+    p
+        height: 0.65rem;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        font-size .28rem
+    .marquee_top
+        transition: all .5s;
+        margin-top: -.65rem
+
+.v-msgbox-cot
+    line-height: 1.4;
+    text-align: left;
+    color: #666;
+    font-size: .3rem;
+
+// .v-loading
+.v-loading
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .29rem;
+    color: #666;
+    padding: .2rem 0;
+    span div
+        width 23px!important
+        height 23px!important
+        margin-right .2rem
+        border-width: 3px;
+
