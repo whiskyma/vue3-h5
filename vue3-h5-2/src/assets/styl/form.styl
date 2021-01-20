@@ -1,0 +1,48 @@
+
+// btn样式封装
+.btn
+    width 100%
+    border-radius: 4px;
+    font-size: 0.35rem;
+    height: .9rem;
+    font-weight: 500;
+    flexSpace()
+// default--样式
+.btn-default
+    background #e4e3e3
+    color #555
+// primary--样式
+.btn-primary
+    background: $bg-btn
+    color #fff
+// yzm--样式
+.btn-yzm
+    width 2.3rem
+    background $bg-btn
+    color #fff
+    height .75rem
+    font-size .29rem
+button[disabled],input[disabled]
+    background: #e6e4e4;
+    color: #a09c9c;
+
+
+// input
+.v-form
+    height 1rem
+    color: #666;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    border-bottom: 1px solid $border
+    .txt
+        width: 100%;
+        text-align: left;
+        padding-left: .2rem;
+        ellipsis()
+.v-input
+    font-size: .3rem;
+    color: $txt-input
+    padding: 0.1rem .25rem;
+    width: 100%;
+    
